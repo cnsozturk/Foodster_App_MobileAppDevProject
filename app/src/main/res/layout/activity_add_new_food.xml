@@ -8,26 +8,26 @@
 
     <TextView
         android:id="@+id/titlePostFood"
-        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="402dp"
+        android:gravity="center"
         android:text="@string/txtTitlePostFood"
         android:textColor="#000000"
         android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/inputNameFood"
+        app:layout_constraintBottom_toTopOf="@+id/txtResult2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/inputPriceNum"
-        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="13dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/hintPrice"
         android:inputType="number"
         android:minHeight="48dp"
@@ -37,11 +37,11 @@
 
     <EditText
         android:id="@+id/inputNameFood"
-        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="11dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/hintName"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -62,11 +62,11 @@
 
     <EditText
         android:id="@+id/inputAmountNum"
-        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/hintAmount"
         android:inputType="number"
         android:minHeight="48dp"
@@ -76,11 +76,11 @@
 
     <EditText
         android:id="@+id/inputDisc"
-        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="11dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/hintDisc"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/edTimePickUp"
@@ -91,15 +91,25 @@
 
     <EditText
         android:id="@+id/edTimePickUp"
-        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="17dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/hintTime"
         android:inputType="time"
         app:layout_constraintBottom_toTopOf="@+id/btnPost"
         app:layout_constraintStart_toStartOf="@+id/inputDisc"
         app:layout_constraintTop_toBottomOf="@+id/inputDisc" />
+
+    <TextView
+        android:id="@+id/txtResult2"
+        android:layout_width="197dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="71dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlePostFood" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

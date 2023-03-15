@@ -47,6 +47,7 @@ public class MainActivityLogin extends AppCompatActivity {
         dbh.addDataFoodStocksTable("1", "Pelmeni","2023-01-14", "2", "10.23", "12:30", "with pork and beef");
         dbh.addDataFoodStocksTable("1", "Vodka","2023-01-14", "3", "27.23", "12:30", "0,5 litre");
         dbh.addDataFoodStocksTable("1", "Donation for Ukraine","2023-01-14", "1000", "5", "", "Slava Ukraine");
+        dbh.addDataFoodStocksTable("2", "BLUE Borsch","2023-01-14", "3", "23.23", "12:30", "Mammy approved");
 
 
         registerButton.setOnClickListener(new View.OnClickListener() {

@@ -202,20 +202,19 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public Cursor viewFoodStocksName(String foodName) {
         SQLiteDatabase database = this.getReadableDatabase();
 
-        String query = "SELECT * FROM " + TABLE_FOR_FOODOFRESTAURANT_NAME + " WHERE " + "FoodName = " + foodName;
+        String query = "SELECT * FROM " + TABLE_FOR_FOODOFRESTAURANT_NAME + " WHERE " + "FoodName = '" + foodName+"'";
         Cursor cursor = database.rawQuery(query, null);
 
         return cursor;
     }
 
-//    //METHOD TO ADD AMOUNT to FoodStock Table for the particular Food name
-//    public void updateAmount(String name, String amount) {
-//        SQLiteDatabase database = this.getReadableDatabase();
-//
-//        String query = "UPDATE " + TABLE_FOR_FOODOFRESTAURANT_NAME + " SET " + "FoodAmount = " + amount + " WHERE FoodName= "+name;
-//        database.rawQuery(query, null);
-//
-//    }
+    //METHOD TO ADD AMOUNT to FoodStock Table for the particular Food name
+    public Boolean updateAmount(String name, String amount) {
+        SQLiteDatabase database = this.getReadableDatabase();
+        String query = "UPDATE " + TABLE_FOR_FOODOFRESTAURANT_NAME + " SET " + "FoodAmount = " + amount + " WHERE FoodName= '"+name+"'";
+        database.execSQL(query);
+       return true;
+    }
 
 
 
