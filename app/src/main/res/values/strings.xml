@@ -46,4 +46,17 @@
         <item>Richmond</item>
         <item>Surrey</item>
     </string-array>
+
+    <string name="description">image of a restaurant</string>
+    <string name="hint">Search</string>
+    <string name="txtAddress">address</string>
+    <string name="dishOne"> Dish 1</string>
+    <string name="plusSign">+</string>
+    <string name="minusSign">-</string>
+    <string name="dishNumber">1</string>
+    <string name="dishTwo"> Dish 2</string>
+    <string name="dishThree"> Dish 3</string>
+    <string name="txtPickup">Pickup</string>
+    <string name="txtDelivery">Delivery</string>
+    <string name="orderBtn">Order</string>
 </resources>
