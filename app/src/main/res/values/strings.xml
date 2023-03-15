@@ -10,7 +10,6 @@
     <string name="txtForButtonOfRegistrationType">Confirm Type of Registration</string>
     <string name="txtForTextViewRegistrationTypeTitle">Please select the type of Registration you need</string>
     <string name="txtForCustomerRegistrationTitle">Customer Registration: Please provide your details</string>
-    <string name="txtForCustomerOpeningActivityTitle"></string>
     <string name="hintForFirstName">First Name</string>
     <string name="hintTextForLastName">Last Name</string>
     <string name="hintForFirstNameOwner">Owner\'s First Name</string>
@@ -32,7 +31,6 @@
     <string name="btnPost">Post</string>
     <string name="hintTime">Time to pickup</string>
     <string name="txtTitlePostFood">Posting new Dish</string>
-    <string name="txtForRestaurantOpeningActivityTitle">Welcome Restaurant User</string>
     <string name="txtForCustomerOpeningActivityTitle">Welcome Customer User</string>
     <string name="txtProfile">Profile Details</string>
     <string name="txtName">Name</string>
@@ -65,7 +63,7 @@
     </string-array>
 
     <string name="description">image of a restaurant</string>
-    <string name="hint">Search</string>
+    <string name="hintSearch">Search</string>
     <string name="txtAddress">address</string>
     <string name="dishOne"> Dish 1</string>
     <string name="plusSign">+</string>
