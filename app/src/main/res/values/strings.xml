@@ -32,6 +32,23 @@
     <string name="btnPost">Post</string>
     <string name="hintTime">Time to pickup</string>
     <string name="txtTitlePostFood">Posting new Dish</string>
+    <string name="txtForRestaurantOpeningActivityTitle">Welcome Restaurant User</string>
+    <string name="txtForCustomerOpeningActivityTitle">Welcome Customer User</string>
+    <string name="txtProfile">Profile Details</string>
+    <string name="txtName">Name</string>
+    <string name="txtLast">Last Name</string>
+    <string name="txtMail">Email</string>
+    <string name="txtNumber">Number</string>
+    <string name="txtAdress">Adress</string>
+    <string name="email">email@email.com</string>
+    <string name="hint">7765433434</string>
+    <string name="hint2">Customer Adress</string>
+    <string name="btnEditProfile">Edit Profile</string>
+    <string name="btnLogout">Logout</string>
+    <string name="txtEditProfile">Edit Profile</string>
+    <string name="btnSaveChanges">Save Changes</string>
+    <string name="txtRestaurant">Restaurant</string>
+    <string name="hintReasturantName">Restaurant</string>
     <string-array name="registerSpinnerArray">
         <item>Customer</item>
         <item>Restaurant</item>

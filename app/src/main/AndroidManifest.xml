@@ -54,6 +54,18 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".RestaurantEditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".RestaurantProfile"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerEditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerProfile"
+            android:exported="false" />
+        <activity
             android:name=".CustomerOpeningActivity"
             android:exported="false" />
         <activity
