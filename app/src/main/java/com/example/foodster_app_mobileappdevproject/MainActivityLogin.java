@@ -72,27 +72,26 @@ public class MainActivityLogin extends AppCompatActivity {
                                 Toast.makeText(MainActivityLogin.this, "password not correct", Toast.LENGTH_SHORT).show();
                             }
                         }
-                        else{
-                            while (cursorCustomerTable.moveToNext()) {
-                                //get string 0= customer email string 1 = password string 3 = FN st 4 =LN
-                                if (loginUser.equals(cursorCustomerTable.getString(0))){
-                                    strForCustomerTablePassword = cursorCustomerTable.getString(1);
-                                    userFoundInCustomerTable = true;
-                                }
+                    }if (cursorCustomerTable.getCount() > 0){
+                        while (cursorCustomerTable.moveToNext()) {
+                            //get string 0= customer email string 1 = password string 3 = FN st 4 =LN
+                            if (loginUser.equals(cursorCustomerTable.getString(0))){
+                                strForCustomerTablePassword = cursorCustomerTable.getString(1);
+                                userFoundInCustomerTable = true;
                             }
-                            if (userFoundInCustomerTable) {
-                                if(strForCustomerTablePassword.equals(passwordOfLogin)){
-                                    startActivity(new Intent(MainActivityLogin.this,CustomerOpeningActivity.class));
-                                    editTextLoginUser.setText("");
-                                    editTextPasswordLogin.setText("");
-                                }
-                                else {
-                                    Toast.makeText(MainActivityLogin.this, "password not correct", Toast.LENGTH_SHORT).show();
-                                }
+                        }
+                        if (userFoundInCustomerTable) {
+                            if(strForCustomerTablePassword.equals(passwordOfLogin)){
+                                startActivity(new Intent(MainActivityLogin.this,CustomerOpeningActivity.class));
+                                editTextLoginUser.setText("");
+                                editTextPasswordLogin.setText("");
                             }
                             else {
-                                Toast.makeText(MainActivityLogin.this, "User not found, please check your information", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivityLogin.this, "password not correct", Toast.LENGTH_SHORT).show();
                             }
+                        }
+                        else {
+                            Toast.makeText(MainActivityLogin.this, "User not found, please check your information", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
