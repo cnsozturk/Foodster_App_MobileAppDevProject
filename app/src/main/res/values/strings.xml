@@ -22,6 +22,21 @@
     <string name="textForCitySelectiontitle">Please Choose the city of operations from the list</string>
     <string name="txtForRestaurantOpeningActivityTitle">Welcome Restaurant User</string>
     <string name="txtForCustomerOpeningActivityTitle">Welcome Customer User</string>
+    <string name="txtProfile">Profile Details</string>
+    <string name="txtName">Name</string>
+    <string name="txtLast">Last Name</string>
+    <string name="txtMail">Email</string>
+    <string name="txtNumber">Number</string>
+    <string name="txtAdress">Adress</string>
+    <string name="email">email@email.com</string>
+    <string name="hint">7765433434</string>
+    <string name="hint2">Customer Adress</string>
+    <string name="btnEditProfile">Edit Profile</string>
+    <string name="btnLogout">Logout</string>
+    <string name="txtEditProfile">Edit Profile</string>
+    <string name="btnSaveChanges">Save Changes</string>
+    <string name="txtRestaurant">Restaurant</string>
+    <string name="hintReasturantName">Restaurant</string>
     <string-array name="registerSpinnerArray">
         <item>Customer</item>
         <item>Restaurant</item>
@@ -36,17 +51,4 @@
         <item>Richmond</item>
         <item>Surrey</item>
     </string-array>
-
-    <string name="description">image of a restaurant</string>
-    <string name="hint">Search</string>
-    <string name="txtAddress">address</string>
-    <string name="dishOne"> Dish 1</string>
-    <string name="plusSign">+</string>
-    <string name="minusSign">-</string>
-    <string name="dishNumber">1</string>
-    <string name="dishTwo"> Dish 2</string>
-    <string name="dishThree"> Dish 3</string>
-    <string name="txtPickup">Pickup</string>
-    <string name="txtDelivery">Delivery</string>
-    <string name="orderBtn">Order</string>
 </resources>

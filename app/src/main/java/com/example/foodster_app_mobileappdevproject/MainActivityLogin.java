@@ -51,8 +51,8 @@ public class MainActivityLogin extends AppCompatActivity {
                     boolean userFoundInCustomerTable = false;
 
                     String userType = "";
-                    //check Restaurant Table OR  the customer table to loop in both of them and find the login user
-                    if (cursorRestaurantTable.getCount() > 0  || cursorCustomerTable.getCount() > 0 ) {
+                    //check Restaurant Table
+                    if (cursorRestaurantTable.getCount() > 0) {
                         //to move through the whole data rows
                         while (cursorRestaurantTable.moveToNext()) {
                             //get string 8= restaurant email string 1 = password string 3 = Restaurant Name st 4 =FnOwner
@@ -63,14 +63,16 @@ public class MainActivityLogin extends AppCompatActivity {
                             }
                         }
                         if (userFoundInRestaurantTable) {
-                            if (strForRestaurantTablePassword.equals(passwordOfLogin)) {
+                            if(strForRestaurantTablePassword.equals(passwordOfLogin)) {
                                 startActivity(new Intent(MainActivityLogin.this, RestaurantOpeningActivity.class));
                                 editTextLoginUser.setText("");
                                 editTextPasswordLogin.setText("");
-                            } else {
+                            }
+                            else {
                                 Toast.makeText(MainActivityLogin.this, "password not correct", Toast.LENGTH_SHORT).show();
                             }
-                        } else {
+                        }
+                        else{
                             while (cursorCustomerTable.moveToNext()) {
                                 //get string 0= customer email string 1 = password string 3 = FN st 4 =LN
                                 if (loginUser.equals(cursorCustomerTable.getString(0))){
@@ -87,13 +89,12 @@ public class MainActivityLogin extends AppCompatActivity {
                                 else {
                                     Toast.makeText(MainActivityLogin.this, "password not correct", Toast.LENGTH_SHORT).show();
                                 }
-                            }else {
+                            }
+                            else {
                                 Toast.makeText(MainActivityLogin.this, "User not found, please check your information", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
-                    cursorCustomerTable.close();
-                    cursorRestaurantTable.close();
                 }
             }
         });

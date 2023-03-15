@@ -2,7 +2,6 @@ package com.example.foodster_app_mobileappdevproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -27,7 +26,6 @@ public class CustomerRegisterActivity extends AppCompatActivity {
 
         buttonRegisterCustomer.setOnClickListener(new View.OnClickListener() {
             boolean isRegistered;
-            boolean userExistsInRestaurantTable = false;
             @Override
             public void onClick(View view) {
 
@@ -40,38 +38,25 @@ public class CustomerRegisterActivity extends AppCompatActivity {
                     Toast.makeText(CustomerRegisterActivity.this, "Please fill all the fields", Toast.LENGTH_LONG).show();
                 }
                 else {
-                    Cursor cursorRestaurantTable = dbh.viewDataFromRestaurantTable();
-                    if (cursorRestaurantTable.getCount() > 0){
-                        while (cursorRestaurantTable.moveToNext()) {
-                            if (editTextUserNameEmail.getText().toString().equals(cursorRestaurantTable.getString(8))){
-                                userExistsInRestaurantTable = true;
-                            }
-                        }
-                    }
-                    if(userExistsInRestaurantTable){
-                        Toast.makeText(CustomerRegisterActivity.this, "Customer Registration unsuccessful, User Email already registered as Restaurant", Toast.LENGTH_LONG).show();
-                    } else{
-                        isRegistered = dbh.addDataCustomerTable(editTextUserNameEmail.getText().toString(),
-                                editTextCustomerPassword.getText().toString(),
-                                editTextFirstNameCustomer.getText().toString(),
-                                editTextLastNameCustomer.getText().toString(),
-                                editTextAddressCustomer.getText().toString(),
-                                editTextPhoneCustomer.getText().toString());
+                    isRegistered = dbh.addDataCustomerTable(editTextUserNameEmail.getText().toString(),
+                            editTextCustomerPassword.getText().toString(),
+                            editTextFirstNameCustomer.getText().toString(),
+                            editTextLastNameCustomer.getText().toString(),
+                            editTextAddressCustomer.getText().toString(),
+                            editTextPhoneCustomer.getText().toString());
 
-                        if(isRegistered){
-                            Toast.makeText(CustomerRegisterActivity.this, "Customer Registered Successfully", Toast.LENGTH_LONG).show();
-                            editTextUserNameEmail.setText("");
-                            editTextCustomerPassword.setText("");
-                            editTextFirstNameCustomer.setText("");
-                            editTextLastNameCustomer.setText("");
-                            editTextAddressCustomer.setText("");
-                            editTextPhoneCustomer.setText("");
-                        }
-                        else{
-                            Toast.makeText(CustomerRegisterActivity.this, "Customer Registration unsuccessful, User Email already registered", Toast.LENGTH_LONG).show();
-                        }
+                    if(isRegistered){
+                        Toast.makeText(CustomerRegisterActivity.this, "Customer Registered Successfully", Toast.LENGTH_LONG).show();
+                        editTextUserNameEmail.setText("");
+                        editTextCustomerPassword.setText("");
+                        editTextFirstNameCustomer.setText("");
+                        editTextLastNameCustomer.setText("");
+                        editTextAddressCustomer.setText("");
+                        editTextPhoneCustomer.setText("");
                     }
-                    cursorRestaurantTable.close();
+                    else{
+                        Toast.makeText(CustomerRegisterActivity.this, "Customer Registration unsuccessful, User Email already registered", Toast.LENGTH_LONG).show();
+                    }
                 }
 
             }
