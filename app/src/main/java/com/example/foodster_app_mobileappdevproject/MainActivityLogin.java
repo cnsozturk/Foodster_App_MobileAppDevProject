@@ -3,8 +3,10 @@ package com.example.foodster_app_mobileappdevproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +25,29 @@ public class MainActivityLogin extends AppCompatActivity {
         EditText editTextPasswordLogin = findViewById(R.id.editTextForLoginPassword);
         Button registerButton = findViewById(R.id.btnOpenRegisterActivity);
         Button loginButton = findViewById(R.id.btnLogin);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        //DummyData
+      dbh.addDataRestaurantTable("1", "1", "Kozak", "Nikolay",
+                "Shevchenko", "12367897789978", "New Westminster", "777 Royal st");
+        dbh.addDataRestaurantTable("murmur@gmail.com", "pasiki", "BestHavchik", "Vasiliy",
+                "Marchenko", "128129978", "North Vancouver", "1 Golden st");
+        dbh.addDataRestaurantTable("chebur@gmail.com", "orange", "FreshOranges", "Cheburashka",
+                "Bezfamiliy", "0989978", "Burnaby", "34 Fifth st");
+        dbh.addDataRestaurantTable("shapo@gmail.com", "badStuff", "Dirty Monk", "Staruha",
+                "Shapoklyak", "666", "Surrey", "89 Stones st");
+        dbh.addDataCustomerTable("helicopter@gmail.com", "heli", "Karlson", "Bezfamiliy",
+                "Roof 54", "392478238");
+        dbh.addDataCustomerTable("revolution@gmail.com", "revo", "Ulyanov", "Lenin",
+                "1 Lenina st.", "392478238");
+        dbh.addDataCustomerTable("corn@gmail.com", "corn", "Nikita", "Hrushev",
+                "9 Tention st.", "52345235");
+        dbh.addDataFoodStocksTable("1", "Red Borsch","2023-01-14", "3", "23.23", "12:30", "Mammy approved");
+        dbh.addDataFoodStocksTable("1", "Salo","2023-01-14", "2", "50.23", "12:30", "Best appetiser");
+        dbh.addDataFoodStocksTable("1", "Pelmeni","2023-01-14", "2", "10.23", "12:30", "with pork and beef");
+        dbh.addDataFoodStocksTable("1", "Vodka","2023-01-14", "3", "27.23", "12:30", "0,5 litre");
+        dbh.addDataFoodStocksTable("1", "Donation for Ukraine","2023-01-14", "1000", "5", "", "Slava Ukraine");
+
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +85,17 @@ public class MainActivityLogin extends AppCompatActivity {
                             if (loginUser.equals(cursorRestaurantTable.getString(8))){
                                 strForRestaurantTablePassword = (cursorRestaurantTable.getString(1));
                                 userFoundInRestaurantTable = true;
+                                SharedPreferences.Editor editor = preferences.edit();
+                                editor.putString("RestaurantID", cursorRestaurantTable.getString(0));
+                                editor.putString("PasswordOfRestaurant", cursorRestaurantTable.getString(1));
+                                editor.putString("RestaurantName", cursorRestaurantTable.getString(2));
+                                editor.putString("FirstNameOwner", cursorRestaurantTable.getString(3));
+                                editor.putString("LastNameOwner", cursorRestaurantTable.getString(4));
+                                editor.putString("PhoneNumberRestaurant", cursorRestaurantTable.getString(5));
+                                editor.putString("City", cursorRestaurantTable.getString(6));
+                                editor.putString("AddressRestaurant", cursorRestaurantTable.getString(7));
+                                editor.putString("RestaurantEmail", cursorRestaurantTable.getString(8));
+                                editor.commit();
                             }
                         }
                         if (userFoundInRestaurantTable) {

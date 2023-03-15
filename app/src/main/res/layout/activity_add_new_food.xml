@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewFoodActivity">
+
+    <TextView
+        android:id="@+id/titlePostFood"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/txtTitlePostFood"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputNameFood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputPriceNum"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:hint="@string/hintPrice"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputAmountNum"
+        app:layout_constraintStart_toStartOf="@+id/inputNameFood"
+        app:layout_constraintTop_toBottomOf="@+id/inputNameFood" />
+
+    <EditText
+        android:id="@+id/inputNameFood"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:hint="@string/hintName"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputPriceNum"
+        app:layout_constraintEnd_toEndOf="@+id/titlePostFood"
+        app:layout_constraintTop_toBottomOf="@+id/titlePostFood" />
+
+    <Button
+        android:id="@+id/btnPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="156dp"
+        android:text="@string/btnPost"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTimePickUp" />
+
+    <EditText
+        android:id="@+id/inputAmountNum"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="@string/hintAmount"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputDisc"
+        app:layout_constraintStart_toStartOf="@+id/inputPriceNum"
+        app:layout_constraintTop_toBottomOf="@+id/inputPriceNum" />
+
+    <EditText
+        android:id="@+id/inputDisc"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:hint="@string/hintDisc"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edTimePickUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputAmountNum"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/edTimePickUp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="@string/hintTime"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/btnPost"
+        app:layout_constraintStart_toStartOf="@+id/inputDisc"
+        app:layout_constraintTop_toBottomOf="@+id/inputDisc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@
     <string name="txtForButtonOfRegistrationType">Confirm Type of Registration</string>
     <string name="txtForTextViewRegistrationTypeTitle">Please select the type of Registration you need</string>
     <string name="txtForCustomerRegistrationTitle">Customer Registration: Please provide your details</string>
+    <string name="txtForCustomerOpeningActivityTitle"></string>
     <string name="hintForFirstName">First Name</string>
     <string name="hintTextForLastName">Last Name</string>
     <string name="hintForFirstNameOwner">Owner\'s First Name</string>
@@ -20,8 +21,17 @@
     <string name="hintTextForRestaurantName">New Restaurant Name</string>
     <string name="restaurantRegisterSpinnerCityPrompt">Select the city of operation</string>
     <string name="textForCitySelectiontitle">Please Choose the city of operations from the list</string>
-    <string name="txtForRestaurantOpeningActivityTitle">Welcome Restaurant User</string>
-    <string name="txtForCustomerOpeningActivityTitle">Welcome Customer User</string>
+    <string name="txtForRestaurantOpeningActivityTitle">Welcome,</string>
+    <string name="txtMenu">Menu</string>
+    <string name="btnAdd">Add</string>
+    <string name="btnRemove">Remove</string>
+    <string name="hintDisc">Discription</string>
+    <string name="hintName">Name</string>
+    <string name="hintPrice">Price</string>
+    <string name="hintAmount">Amount</string>
+    <string name="btnPost">Post</string>
+    <string name="hintTime">Time to pickup</string>
+    <string name="txtTitlePostFood">Posting new Dish</string>
     <string-array name="registerSpinnerArray">
         <item>Customer</item>
         <item>Restaurant</item>

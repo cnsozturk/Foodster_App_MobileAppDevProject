@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class CustomerRegisterActivity extends AppCompatActivity {
-    DataBaseHelper dbh;
+    DataBaseHelper dbh ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

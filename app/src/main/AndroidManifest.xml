@@ -12,6 +12,13 @@
         android:theme="@style/Theme.Foodster_App_MobileAppDevProject"
         tools:targetApi="31">
         <activity
+            android:name=".AddNewFoodActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CustomerOpeningActivity"
             android:exported="false" />
         <activity
