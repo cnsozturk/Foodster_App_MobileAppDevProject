@@ -4,127 +4,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNewFoodActivity">
+    tools:context=".RestaurantEditFoodActivity">
 
     <TextView
         android:id="@+id/titleEditDish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="402dp"
         android:gravity="center"
-        android:text="@string/txtTitlePostFood"
+        android:text="@string/titleEditDish"
         android:textColor="#000000"
         android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtResult2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028" />
 
     <EditText
         android:id="@+id/txtDishPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
         android:ems="10"
         android:gravity="center"
         android:hint="@string/hintPrice"
         android:inputType="number"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtDishNum"
-        app:layout_constraintStart_toStartOf="@+id/txtDishName"
-        app:layout_constraintTop_toBottomOf="@+id/txtDishName" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.223"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/txtDishName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="11dp"
         android:ems="10"
         android:gravity="center"
         android:hint="@string/hintName"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtDishPrice"
-        app:layout_constraintEnd_toEndOf="@+id/titleEditDish"
-        app:layout_constraintTop_toBottomOf="@+id/titleEditDish" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.115"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btnSaveEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btnAdd"
+        android:text="@string/txtSave"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.749" />
+        app:layout_constraintVertical_bias="0.693" />
 
     <EditText
         android:id="@+id/txtDishNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:ems="10"
         android:gravity="center"
         android:hint="@string/hintAmount"
         android:inputType="number"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtDishDisc"
-        app:layout_constraintStart_toStartOf="@+id/txtDishPrice"
-        app:layout_constraintTop_toBottomOf="@+id/txtDishPrice" />
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.335"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/txtDishDisc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="11dp"
+        android:autofillHints=""
         android:ems="10"
         android:gravity="center"
         android:hint="@string/hintDisc"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtDishPickUp"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDishNum"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.458"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/txtDishPickUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
         android:ems="10"
         android:gravity="center"
         android:hint="@string/hintTime"
         android:inputType="time"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnSaveEdit"
-        app:layout_constraintStart_toStartOf="@+id/txtDishDisc"
-        app:layout_constraintTop_toBottomOf="@+id/txtDishDisc" />
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/txtResult2"
         android:layout_width="197dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="71dp"
+        android:layout_height="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleEditDish" />
-
-    <Button
-        android:id="@+id/btnRemove"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txtDelete"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.841"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.751" />
+        app:layout_constraintVertical_bias="0.851" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

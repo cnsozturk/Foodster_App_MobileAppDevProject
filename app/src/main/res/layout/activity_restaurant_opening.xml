@@ -17,63 +17,53 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/btnAddRemove"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="74dp"
-        android:text="@string/txtMenu"
-        android:textColor="#000000"
-        android:textSize="20sp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="82dp"
+        android:text="@string/btnAddRem"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnAddDish"
+        android:id="@+id/btnViewEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginBottom="111dp"
-        android:text="@string/btnAdd"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/txtTEST" />
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="13dp"
+        android:text="@string/btnViewEdit"
+        app:layout_constraintStart_toStartOf="@+id/btnSendRemind"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddRemove" />
 
     <Button
-        android:id="@+id/btnRemoveDish"
+        android:id="@+id/btnSendRemind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/btnRemove"
-        app:layout_constraintBottom_toTopOf="@+id/txtTEST"
-        app:layout_constraintEnd_toEndOf="@+id/txtTEST" />
+        android:layout_marginTop="13dp"
+        android:text="@string/btnSendRemind"
+        app:layout_constraintStart_toStartOf="@+id/btnGenReport"
+        app:layout_constraintTop_toBottomOf="@+id/btnViewEdit" />
 
-    <TextView
-        android:id="@+id/txtTEST"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <Button
+        android:id="@+id/btnGenReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/btnGenRepo"
+        app:layout_constraintEnd_toEndOf="@+id/btnRlogOut"
+        app:layout_constraintStart_toEndOf="@+id/btnRlogOut"
+        app:layout_constraintTop_toBottomOf="@+id/btnSendRemind" />
+
+    <Button
+        android:id="@+id/btnRlogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="41dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginBottom="12dp"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:text="@string/btnLogout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddDish" />
-
-    <ListView
-        android:id="@+id/lstFoodStock"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="75dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnAddDish"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/btnGenReport" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
