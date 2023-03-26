@@ -86,9 +86,9 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnRLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="143dp"
+        android:layout_height="62dp"
         android:layout_marginBottom="66dp"
         android:text="@string/btnSaveChanges"
         app:layout_constraintBottom_toBottomOf="parent"

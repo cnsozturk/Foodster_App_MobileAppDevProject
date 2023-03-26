@@ -30,7 +30,7 @@ public class RestaurantOpeningActivity extends AppCompatActivity {
         Button btnSendRemind = findViewById(R.id.btnSendRemind);
         Button btnGenReport = findViewById(R.id.btnGenReport);
         Button btnLogOut = findViewById(R.id.btnRlogOut);
-
+        Button btnProfile = findViewById(R.id.btnShowProfile);
         SharedPreferences preferences =
                 PreferenceManager.getDefaultSharedPreferences(this);
         String restaurantId = preferences.getString("RestaurantID", "defaultValue");
@@ -43,6 +43,14 @@ public class RestaurantOpeningActivity extends AppCompatActivity {
         String address = preferences.getString("AddressRestaurant", "defaultValue");
         String email = preferences.getString("RestaurantEmail", "defaultValue");
         txtWelcome.setText("Welcome, "+firstNameOwner+"!");
+
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RestaurantOpeningActivity.this,RestaurantProfile.class));
+
+            }
+        });
 
         btnAddRemove.setOnClickListener(new View.OnClickListener() {
             @Override

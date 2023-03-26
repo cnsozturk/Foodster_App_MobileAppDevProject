@@ -10,155 +10,63 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
         android:text="@string/txtProfile"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/txtName"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="29dp" />
 
     <TextView
         android:id="@+id/txtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="45dp"
         android:text="@string/txtName"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/etxtCFirstName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="68dp" />
 
     <TextView
         android:id="@+id/txtLast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
 
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="14dp"
         android:text="@string/txtLast"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/etxtCLastName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etxtCLastName" />
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="120dp" />
 
     <TextView
         android:id="@+id/txtmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
-        android:layout_marginEnd="52dp"
         android:text="@string/txtMail"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/etxtCMail"
-        app:layout_constraintEnd_toStartOf="@+id/etxtCMail"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="189dp" />
 
     <TextView
         android:id="@+id/txtNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="241dp"
-        android:layout_marginEnd="35dp"
         android:text="@string/txtNumber"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/etxtCPhone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="241dp" />
 
     <TextView
         android:id="@+id/txtAdress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
-        android:layout_marginEnd="42dp"
         android:text="@string/txtAdress"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/etxtCAdress"
-        app:layout_constraintEnd_toStartOf="@+id/etxtCAdress"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/etxtCMail"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="61dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="63dp"
-        android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="@+id/etxtCPhone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtmail"
-        app:layout_constraintTop_toTopOf="@+id/etxtCLastName" />
-
-    <EditText
-        android:id="@+id/etxtCPhone"
-        android:layout_width="0dp"
-        android:layout_height="53dp"
-        android:layout_marginEnd="81dp"
-        android:ems="10"
-        android:hint="@string/hint"
-        android:inputType="phone"
-        app:layout_constraintBottom_toBottomOf="@+id/txtNumber"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtNumber"
-        app:layout_constraintTop_toBottomOf="@+id/txtNumber" />
-
-    <EditText
-        android:id="@+id/etxtCAdress"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="83dp"
-        android:layout_marginBottom="63dp"
-        android:ems="10"
-        android:hint="@string/hint2"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/btnCEditProfile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtAdress"
-        app:layout_constraintTop_toTopOf="@+id/etxtCPhone" />
-
-    <EditText
-        android:id="@+id/etxtCFirstName"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="@string/hintForFirstName"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/etxtCLastName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtName"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/etxtCLastName"
-        android:layout_width="0dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="67dp"
-        android:ems="10"
-        android:hint="@string/hintTextForLastName"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/etxtCPhone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtLast"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="379dp" />
 
     <Button
         android:id="@+id/btnCEditProfile"

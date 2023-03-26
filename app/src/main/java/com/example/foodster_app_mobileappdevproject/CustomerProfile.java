@@ -9,11 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class CustomerProfile extends AppCompatActivity {
-EditText CustomerFirstName=findViewById(R.id.etxtCFirstName);
-EditText CustomerLastName=findViewById(R.id.etxtCLastName);
-EditText CustomerMail=findViewById(R.id.etxtCMail);
-EditText CustomerPhone=findViewById(R.id.etxtCPhone);
-EditText CustomerAdress=findViewById(R.id.etxtCAdress);
+//EditText CustomerFirstName=findViewById(R.id.etxtCFirstName);
+//EditText CustomerLastName=findViewById(R.id.etxtCLastName);
+//EditText CustomerMail=findViewById(R.id.etxtCMail);
+//EditText CustomerPhone=findViewById(R.id.etxtCPhone);
+//EditText CustomerAdress=findViewById(R.id.etxtCAdress);
     Button btnEditProfile=findViewById(R.id.btnCEditProfile);
     Button btnLogout=findViewById(R.id.btnCLogout);
 
